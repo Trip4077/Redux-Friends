@@ -1,11 +1,34 @@
 import React from 'react';
 
-const FriendList = props => {
-  return(
-    <div>
-      Test
-    </div>
-  );
+import { connect } from 'react-redux';
+import { getFriends } from '../actions';
+
+class FriendList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    console.log('test')
+    this.props.getFriends()
+  }
+
+  render() {
+    console.log('test')
+    return(
+      <div>
+        Test
+      </div>
+    );
+  }
 }
 
-export default FriendList;
+const mstp = state => {
+  console.log('MSTP: ', state)
+
+  return {
+    ...state
+  }
+}
+
+export default connect(mstp, { getFriends })(FriendList);
