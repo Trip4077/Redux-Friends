@@ -1,4 +1,6 @@
 import React from 'react';
+import Friend from './Friend';
+import Loader from './Loader';
 
 import { connect } from 'react-redux';
 import { getFriends } from '../actions';
@@ -13,10 +15,13 @@ class FriendList extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    const friends = this.props.getFriendReducer.friends
+
     return(
       <div>
-        { this.props.getFriendReducer.friends.length > 0 ? <p>yes</p> : <p>no</p>}
+        { friends.length > 0 ? friends.map(friend => <Friend data={friend}
+                                                             key={friend.id} />)
+                               : <Loader />}
       </div>
     );
   }

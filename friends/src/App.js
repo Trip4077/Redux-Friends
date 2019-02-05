@@ -5,9 +5,6 @@ import './App.css';
 
 class App extends Component {
   render() {
-
-    console.log('test app')
-
     return (
       <div className="App">
         <FriendList />
