@@ -1,13 +1,6 @@
-const initialState = {
-  fetchFriends: false,
-  friendsFetched: false,
-  friends: [],
-  error: ''
-}
+import { combineReducers } from 'redux';
+import { getFriendReducer } from './getFriendReducer';
 
-export const getFriendReducer = (state = initialState, action) => {
-  switch(action.type) {
-    default:
-      return state
-  }
-}
+export default combineReducers({
+  getFriendReducer
+});
