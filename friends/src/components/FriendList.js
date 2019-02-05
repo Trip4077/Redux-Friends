@@ -14,7 +14,6 @@ class FriendList extends React.Component {
   }
 
   render() {
-    console.log('test')
     return(
       <div>
         Test
