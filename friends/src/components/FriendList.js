@@ -9,22 +9,20 @@ class FriendList extends React.Component {
   }
 
   componentDidMount() {
-    console.log('test')
     this.props.getFriends()
   }
 
   render() {
+    console.log(this.props)
     return(
       <div>
-        Test
+        { this.props.getFriendReducer.friends.length > 0 ? <p>yes</p> : <p>no</p>}
       </div>
     );
   }
 }
 
 const mstp = state => {
-  console.log('MSTP: ', state)
-
   return {
     ...state
   }
