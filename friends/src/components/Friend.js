@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Friend = props => {
-  console.log(props.data)
   return(
     <div>
       <h1>{props.data.name}</h1>
