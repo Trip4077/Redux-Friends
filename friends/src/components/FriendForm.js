@@ -69,7 +69,7 @@ class FriendForm extends React.Component {
 
     return (
       <form className='input-form'>
-        <h1>Add Friend To List</h1>
+        <h1>Email Contact Book</h1>
 
          <div>
            <input type='text'
