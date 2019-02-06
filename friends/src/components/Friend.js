@@ -14,16 +14,15 @@ const Friend = props => {
     props.deleteFriend(props.data.id);
     props.getFriends();
   }
-console.log('FRIEND', props.getFriendReducer.fetchFriends)
-  return(
 
+  return(
     <div>
-      { props.getFriendReducer.fetchFriends ? <Loader /> : <div>
-                                                                <h1>{props.data.name}</h1>
-                                                                <h2>{props.data.age}</h2>
-                                                                <h3>{props.data.email}</h3>
-                                                                <span onClick={deleteHandler}>&#x2718;</span>
-                                                               </div> }
+      { props.getFriendReducer.fetchFriends ? <Loader /> :  <div>
+                                                              <h1>{props.data.name}</h1>
+                                                              <h2>{props.data.age}</h2>
+                                                              <h3>{props.data.email}</h3>
+                                                              <span onClick={deleteHandler}>&#x2718;</span>
+                                                             </div> }
     </div>
   );
 }

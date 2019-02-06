@@ -28,6 +28,10 @@ class FriendForm extends React.Component {
   handleAdd = e => {
     e.preventDefault();
 
+    for (let key in this.state.friend) {
+      if(this.state.friend[key] === '' || this.state.friend[key] === undefined) { return; }
+    }
+
     this.props.addFriend(this.state.friend)
     this.props.getFriends();
 
@@ -44,7 +48,12 @@ class FriendForm extends React.Component {
     e.preventDefault();
 
     const friend = this.props.getFriendReducer.friends.filter(friend => friend.name.toLowerCase() === this.state.friend.name.toLowerCase());
+
+    if(friend[0] == undefined) { return; }
+
     const id = friend[0].id;
+
+
 
     this.props.updateFriend(this.state.friend, id)
     this.props.getFriends();

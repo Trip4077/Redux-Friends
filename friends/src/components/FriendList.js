@@ -6,10 +6,6 @@ import { connect } from 'react-redux';
 import { getFriends } from '../actions';
 
 class FriendList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.getFriends()
   }
