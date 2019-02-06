@@ -16,7 +16,7 @@ const Friend = props => {
   }
 
   return(
-    <div>
+    <div className='friend-loader'>
       { props.getFriendReducer.fetchFriends ? <Loader /> :  <div className='list__friend'>
                                                               <h1>{props.data.name}</h1>
                                                               <h2>{props.data.age}</h2>

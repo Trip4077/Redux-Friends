@@ -139,7 +139,7 @@ html {
   height: 15px;
   width: 15px;
   left: 0;
-  top: 200px;
+  top: 0;
   border-radius: 50%;
   animation: ring-grow 1s linear infinite;
 }
@@ -240,8 +240,8 @@ html {
   border-radius: 20px 0  0 20px;
   border: none;
   background-color: transparent;
-  border-top: 2px dashed rgba(209, 212, 243, 0.6);
-  border-left: 2px dashed rgba(209, 212, 243, 0.6);
+  border-top: 2px dashed rgba(209, 212, 243, 0.5);
+  border-left: 2px dashed rgba(209, 212, 243, 0.5);
   border-right: 2px dashed rgba(209, 212, 243, 0);
   border-bottom: 2px dashed rgba(209, 212, 243, 0);
   transition: border-radius 0.75s, border 0.75s;
@@ -256,29 +256,29 @@ html {
 }
 .input-form div input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: rgba(209, 212, 243, 0.6);
+  color: rgba(209, 212, 243, 0.5);
 }
 .input-form div input::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(209, 212, 243, 0.6);
+  color: rgba(209, 212, 243, 0.5);
 }
 .input-form div input:-ms-input-placeholder {
   /* IE 10+ */
-  color: rgba(209, 212, 243, 0.6);
+  color: rgba(209, 212, 243, 0.5);
 }
 .input-form div input:-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(209, 212, 243, 0.6);
+  color: rgba(209, 212, 243, 0.5);
 }
 .input-form div button {
-  border: 2px dotted rgba(209, 212, 243, 0.6);
+  border: 2px dotted rgba(209, 212, 243, 0.5);
   border-radius: 0 0 20px 20px;
   background-color: transparent;
   height: 40px;
   width: 200px;
   font-size: 2rem;
   letter-spacing: 2.5px;
-  color: rgba(209, 212, 243, 0.6);
+  color: rgba(209, 212, 243, 0.5);
   transition: background-color 0.5s, color 0.5s, border-radius 0.5s, border-color 0.5s;
 }
 .input-form div button:hover {
@@ -298,7 +298,9 @@ html {
   height: 75px;
 }
 .list {
-  border: 1px solid red;
+  background-color: #5762D5;
+  border: 3px outset #303675;
+  border-radius: 0 35px 0 35px;
   box-sizing: border-box;
   width: 100%;
   max-width: 1350px;
@@ -310,18 +312,29 @@ html {
   align-items: flex-start;
 }
 .list .list__friend {
-  border: 1px solid blue;
-  height: 300px;
-  width: 300px;
+  border: 2px solid rgba(209, 212, 243, 0.5);
+  height: 330px;
+  width: 270px;
   position: relative;
   margin: 25px 0;
   padding: 20px;
   font-size: 3.8rem;
+  color: rgba(209, 212, 243, 0.5);
   letter-spacing: 2px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  transition: color 0.75s, border-color 0.5s, background-color 0.5s;
+}
+.list .list__friend:hover {
+  color: #d1d4f3;
+  border-color: #d1d4f3;
+  background-color: #303675;
+}
+.list .list__friend h1 {
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 .list .list__friend h3 {
   font-size: 2.2rem;
@@ -332,4 +345,7 @@ html {
   right: 15px;
   font-size: 2.6rem;
   cursor: pointer;
+}
+.friend-loader {
+  position: relative;
 }
