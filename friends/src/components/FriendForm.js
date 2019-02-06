@@ -49,11 +49,9 @@ class FriendForm extends React.Component {
 
     const friend = this.props.getFriendReducer.friends.filter(friend => friend.name.toLowerCase() === this.state.friend.name.toLowerCase());
 
-    if(friend[0] == undefined) { return; }
+    if(friend[0] === undefined) { return; }
 
     const id = friend[0].id;
-
-
 
     this.props.updateFriend(this.state.friend, id)
     this.props.getFriends();

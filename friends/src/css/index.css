@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+.loader7 {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  background: transparent;
+  border: 2.5px solid red;
+  height: 15px;
+  width: 15px;
+  left: -3%;
+  top: 200px;
+  border-radius: 50%;
+  animation: ring-grow 1s linear infinite;
+}
+.ring {
+  position: relative;
+  top: -193px;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 2px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 750%;
+  font-family: serif;
+  font-size: 20px;
+  color: #32CD32;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #2E8B57;
+  box-shadow: 0 0 30px #000000;
+  opacity: 0;
+}
+.ring:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 97%;
+  height: 97%;
+  border: 3px solid transparent;
+  border-right: 3px dashed #32CD32;
+  border-radius: 50%;
+  animation: ringloader 2s linear infinite;
+}
+#ring2 {
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+#ring3 {
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+@keyframes ring-grow {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(0.1, 0.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3, 3);
+    opacity: 0;
+  }
+}
+@keyframes ringloader {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
+.App {
+  text-align: center;
+}

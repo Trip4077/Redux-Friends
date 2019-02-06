@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FriendList from './components/FriendList';
 import FriendForm from './components/FriendForm';
 
-import './App.css';
+import './css/index.css';
 
 class App extends Component {
   render() {
