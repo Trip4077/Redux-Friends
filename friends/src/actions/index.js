@@ -47,3 +47,19 @@ export const deleteFriend = id => dispatch => {
           dispatch({ type: DELETE_FAIL, payload: err })
         )
 }
+
+export const UPDATE_FRIEND = 'UPDATE_FRIEND';
+export const UPDATE_SUCCESS = 'UPDATE_SUCCESS';
+export const UPDATE_FAIL = 'UPDATE_FAIL';
+
+export const updateFriend = (friend, id) => dispatch => {
+  dispatch({ type: UPDATE_FRIEND });
+
+  axios.put(`http://localhost:5000/api/friends/${id}`, friend)
+        .then(res =>
+          console.log(res)
+        )
+        .catch(err =>
+          console.log(err)
+        )
+}
