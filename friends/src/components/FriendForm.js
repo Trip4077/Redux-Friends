@@ -69,6 +69,8 @@ class FriendForm extends React.Component {
 
     return (
       <form className='input-form'>
+        <h1>Add Friend To List</h1>
+
          <div>
            <input type='text'
                    name='name'
@@ -89,7 +91,7 @@ class FriendForm extends React.Component {
                    value={this.state.friend.email}
                    />
          </div>
-         
+
          <div>
            <button onClick={this.handleAdd}>Add Friend</button>
            <button onClick={this.handleUpdate}>Update Friend</button>
