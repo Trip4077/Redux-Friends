@@ -138,7 +138,7 @@ html {
   border: 2.5px solid red;
   height: 15px;
   width: 15px;
-  left: -3%;
+  left: 0;
   top: 200px;
   border-radius: 50%;
   animation: ring-grow 1s linear infinite;
@@ -208,4 +208,53 @@ html {
 }
 .App {
   text-align: center;
+}
+.input-form {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.input-form div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+}
+.input-form div input {
+  width: 100%;
+  max-width: 400px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 20px 0  0 20px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: border-radius 0.5s;
+}
+.input-form div input:focus {
+  outline: none;
+  border-radius: 0 20px 20px 0 ;
+}
+.input-form div button {
+  border: none;
+  border-radius: 0 0 20px 20px;
+  height: 40px;
+  width: 200px;
+  font-size: 2rem;
+  letter-spacing: 2.5px;
+  transition: background-color 0.5s, color 0.5s, border-radius 0.5s;
+}
+.input-form div button:hover {
+  background-color: black;
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+.input-form div:first-of-type {
+  border: 1px solid blue;
+  flex-direction: column;
+}
+.input-form div:last-of-type {
+  border: 1px solid blue;
+  height: 75px;
 }
