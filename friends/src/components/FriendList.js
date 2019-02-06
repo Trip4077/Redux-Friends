@@ -14,7 +14,7 @@ class FriendList extends React.Component {
     const friends = this.props.getFriendReducer.friends
 
     return(
-      <div>
+      <div className='list'>
         { friends.length > 0 ? friends.map(friend => <Friend data={friend}
                                                              key={friend.id} />)
                                : <Loader />}

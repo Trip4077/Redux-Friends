@@ -1,0 +1,47 @@
+.list {
+  border: 1px solid red;
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 1350px;
+  margin: 25px auto;
+  padding: 125px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  .list__friend {
+    border: 1px solid blue;
+
+    height: 300px;
+    width: 300px;
+
+    position: relative;
+    margin: 25px 0;
+    padding: 20px;
+
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    h3 {
+      font-size: 2.2rem;
+    }
+
+    span {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+      font-size: 2.6rem;
+
+      cursor: pointer;
+    }
+  }
+}
