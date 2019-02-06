@@ -31,3 +31,19 @@ export const addFriend = friend => dispatch => {
           dispatch({ type: ADD_FAIL, payload: err })
         );
 }
+
+export const DELETE_FRIEND = 'DELETE_FRIEND';
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+export const DELETE_FAIL = 'DELETE_FAIL';
+
+export const deleteFriend = id => dispatch => {
+  dispatch({ type: DELETE_FRIEND });
+
+  axios.delete(`http://localhost:5000/api/friends/${id}`)
+        .then(res =>
+          dispatch({ type: DELETE_SUCCESS, payload: res.data })
+        )
+        .catch(err =>
+          dispatch({ type: DELETE_FAIL, payload: err })
+        )
+}

@@ -43,7 +43,7 @@ class FriendForm extends React.Component {
   render() {
 
     return (
-      <form>
+      <form className='input-form'>
         <input type='text'
                 name='name'
                 placeholder='Name'
@@ -63,8 +63,10 @@ class FriendForm extends React.Component {
                 value={this.state.friend.email}
                 />
 
-          <button onClick={this.handleAdd}>Add Friend</button>
-          <button>Update Friend</button>
+         <div>
+           <button onClick={this.handleAdd}>Add Friend</button>
+           <button>Update Friend</button>
+         </div>
       </form>
     );
   }
