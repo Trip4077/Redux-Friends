@@ -6,7 +6,7 @@ import { deleteFriend, getFriends } from '../actions';
 
 
 const Friend = props => {
-  console.log('FRIEND', props)
+
 
   const deleteHandler = e => {
     e.preventDefault();
@@ -14,11 +14,11 @@ const Friend = props => {
     props.deleteFriend(props.data.id);
     props.getFriends();
   }
-console.log(props.deleteFriendReducer.deleteFriend)
+console.log('FRIEND', props.getFriendReducer.fetchFriends)
   return(
 
     <div>
-      { props.deleteFriendReducer.deleteFriend ? <Loader /> : <div>
+      { props.getFriendReducer.fetchFriends ? <Loader /> : <div>
                                                                 <h1>{props.data.name}</h1>
                                                                 <h2>{props.data.age}</h2>
                                                                 <h3>{props.data.email}</h3>

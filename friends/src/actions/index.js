@@ -57,9 +57,9 @@ export const updateFriend = (friend, id) => dispatch => {
 
   axios.put(`http://localhost:5000/api/friends/${id}`, friend)
         .then(res =>
-          console.log(res)
+          dispatch({ type: UPDATE_SUCCESS, payload: res.data })
         )
         .catch(err =>
-          console.log(err)
+            dispatch({ type: UPDATE_FAIL, payload: err })
         )
 }
