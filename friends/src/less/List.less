@@ -1,0 +1,68 @@
+.list {
+  background-color: @color-main;
+  border: 3px outset @color-main-dark;
+  border-radius: 0 35px 0 35px;
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 1350px;
+  margin: 25px auto;
+  padding: 125px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  .list__friend {
+    border: 2px solid @color-secondary-m;
+
+    height: 330px;
+    width: 270px;
+
+    position: relative;
+    margin: 25px 0;
+    padding: 20px;
+
+    font-size: 3.8rem;
+    color: @color-secondary-m;
+    letter-spacing: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    transition: color .75s, border-color .5s, background-color .5s;
+
+    &:hover {
+      color: @color-secondary-h;
+      border-color: @color-secondary-h;
+
+      background-color: @color-main-dark;
+    }
+
+    h1 {
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    h3 {
+      font-size: 2.2rem;
+    }
+
+    span {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+      font-size: 2.6rem;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.friend-loader {
+  position: relative;
+}

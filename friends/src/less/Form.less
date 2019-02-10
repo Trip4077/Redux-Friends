@@ -1,0 +1,97 @@
+.input-form {
+  width: 100%;
+  max-width: 900px;
+  margin: 75px auto;
+  padding: 25px;
+
+  background-color: @color-main;
+  border-radius: 35px 0 35px 0;
+  border: 3px outset @color-main-dark;
+
+  h1 {
+    color: @fc-main;
+    font-size: 4.6rem;
+    letter-spacing: 3px;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 325px;
+
+
+    input {
+      width: 100%;
+      max-width: 400px;
+      height: 35px;
+      padding: 0 5px;
+
+      text-align: center;
+      font-size: 2.4rem;
+      color: @fc-main;
+
+      border-radius: 20px 0  0 20px;
+      border: none;
+
+      background-color: transparent;
+      .dashBorder();
+
+      transition: border-radius .75s, border .75s;
+
+      &:focus {
+        outline: none;
+        .dashBorderReverse()
+      }
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: @color-secondary-m;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: @color-secondary-m;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: @color-secondary-m;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: @color-secondary-m;
+      }
+    }
+
+    button {
+      border: 2px dotted @color-secondary-m;
+      border-radius: 0 0 20px 20px;
+      background-color: transparent;
+
+      height: 40px;
+      width: 200px;
+
+      font-size: 2rem;
+      letter-spacing: 2.5px;
+      color: @color-secondary-m;
+
+      transition: background-color .5s, color .5s, border-radius .5s, border-color .5s;
+
+      &:hover {
+        color: @fc-main;
+        border-color: @color-secondary-h;
+        border-radius: 20px 20px 0 0;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  div:first-of-type {
+    flex-direction: column;
+    border-top: 1px solid @color-secondary-h;
+    margin-top: 15px;
+  }
+
+  div:last-of-type {
+    height: 75px;
+  }
+}
